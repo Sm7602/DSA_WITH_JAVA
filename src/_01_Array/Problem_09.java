@@ -1,0 +1,24 @@
+package _01_Array;
+//wap to multiply even by 2 and odd by 3 in sda size 8
+public class Problem_09 {
+	public static void main(String[] arg)
+	{
+	int arr[]=new int[] {1,2,3,4,5,6,7,8};
+	//display
+	for(int i=0;i<arr.length;i++) {
+		System.out.print(arr[i]+",");
+	}
+	System.out.println();
+	//squre
+	for(int i=0;i<arr.length;i++) {
+		if(arr[i]%2!=0) {
+			int sq=arr[i]*arr[i]*arr[i];
+		System.out.print(sq+",");
+		}
+		else {
+			int sq=arr[i]*arr[i];
+			System.out.print(sq+",");
+		}
+	}
+	}
+}
