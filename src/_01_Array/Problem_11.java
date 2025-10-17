@@ -1,26 +1,47 @@
 package _01_Array;
-//WApP to add all even and odd elemrnts of Sda size 8
+
+//Wap to find count even and odd elements in SDA size 8
+
+import java.util.Scanner;
+
 public class Problem_11 {
-	public static void main(String[] arg)
+	
+	public static void inputArr(int arr[])
 	{
-	int arr[]=new int[] {1,2,3,4,5,6,2,8};
-	//display
-	for(int i=0;i<arr.length;i++) {
-		System.out.print(arr[i]+",");
-	}
-	System.out.println();
-	//add
-	int oc=0;
-	int ec=0;
-	for(int i=0;i<arr.length;i++) {
-		if(arr[i]%2!=0) {
-			oc+=arr[i];
+		Scanner sc=new Scanner(System.in);
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("Value of arr["+i+"]  : ");
+			arr[i]=sc.nextInt();
 		}
-		else {
-			ec+=arr[i];
-		}
+		System.out.println("\n");
 	}
-	System.out.println("odd : "+oc+"\neven : "+ec);
+	
+	public static void displayArr(int arr[])
+	{
+		int ec=0;
+		int oc=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i] % 2==0)
+			{
+				ec++;
+			}
+			else
+			{ 
+				oc++;
+			}
+		}
+		System.out.println("even : "+ec+" \n"+"odd : "+oc);
+	}
+	
+	public static void main(String [] arg)
+	{
+		int arr[]=new int[8];
+		inputArr(arr);
+		displayArr(arr);
+		
 	}
 
 }

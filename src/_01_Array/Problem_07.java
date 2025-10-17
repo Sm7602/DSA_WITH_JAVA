@@ -1,23 +1,35 @@
 package _01_Array;
-//Wap to replace all even element by their squre in sda size 8
+//WAP to replace all element by their aqure in sda size 8
+
+import java.util.Scanner;
+
 public class Problem_07 {
-	public static void main(String[] arg) {
-		int arr[]=new int[] {1,2,3,4,5,6,7,8};
-		//display
-		for(int i=0;i<arr.length;i++) {
-			System.out.print(arr[i]+",");
+	public static void inputArr(int arr[])
+	{
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("Value of arr["+i+"] : ");
+			arr[i]=sc.nextInt();
 		}
-		System.out.println();
-		//squre
-		for(int i=0;i<arr.length;i++) {
-			if(arr[i]%2==0) {
-				int sq=arr[i]*arr[i];
-			System.out.print(sq+",");
-			}
-			else {
-				System.out.print(arr[i]+",");
-			}
+		System.out.println("\n");
+	}
+	
+	public static void repalceArr(int arr[])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+		int sq =arr[i]*arr[i];
+		System.out.println("Value of arr["+i+"] : "+sq);
 		}
+		System.out.println("\n");
+	}
+
+	public static void main(String[] arg)
+	{
+		int arr[]=new int[8];
+		inputArr(arr);
+		repalceArr(arr);
 	}
 
 }

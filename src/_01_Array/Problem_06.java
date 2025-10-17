@@ -1,19 +1,38 @@
 package _01_Array;
+
 //WAP to display all element odd position in sda size 8
+
+import java.util.Scanner;
+
 public class Problem_06 {
-	public static void main(String[] arg) {
-		 int arr[]=new int[] {1,2,3,4,5,6,7,8};
-		   //display
-		   for(int i=0;i<arr.length;i++) {
-			   System.out.print(arr[i]+",");
-		   }
-		   System.out.println();
-		   //odd position
-		   for(int i=0;i<arr.length;i++) {
-			   if(i%2!=0) {
-			   System.out.print(arr[i]+",");
-			   }
-		   }
+	
+	public static void inputArr(int arr[]) 
+	{
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("Value of arr["+i+"] : ");
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("\n");
 	}
+	
+	public static void displayArr(int arr[])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			if(i % 2!=0)
+			{
+				System.out.print(arr[i] +"  ");
+			}
+		}
+	}
+	public static void main(String[] arg)
+	{
+		int arr[]=new int[8];
+		inputArr(arr);
+		displayArr(arr);
+	}
+
 
 }

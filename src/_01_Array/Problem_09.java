@@ -1,24 +1,38 @@
 package _01_Array;
-//wap to multiply even by 2 and odd by 3 in sda size 8
+
+//Wap to replace all odd element by qube size 8
+
+import java.util.Scanner;
+
 public class Problem_09 {
-	public static void main(String[] arg)
+	
+	public static void inputArr(int arr[]) 
 	{
-	int arr[]=new int[] {1,2,3,4,5,6,7,8};
-	//display
-	for(int i=0;i<arr.length;i++) {
-		System.out.print(arr[i]+",");
-	}
-	System.out.println();
-	//squre
-	for(int i=0;i<arr.length;i++) {
-		if(arr[i]%2!=0) {
-			int sq=arr[i]*arr[i]*arr[i];
-		System.out.print(sq+",");
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("Value of arr["+i+"] : ");
+			arr[i]=sc.nextInt();
 		}
-		else {
-			int sq=arr[i]*arr[i];
-			System.out.print(sq+",");
+		System.out.println("\n");
+	}
+	
+	public static void displayArr(int arr[])
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			if(i % 2!=0)
+			{
+				int Qu=arr[i]*arr[i]*arr[i];
+				System.out.println("Value of arr["+i+"] : "+Qu);
+			}
 		}
 	}
-	}
+        public static void main(String[] arg)
+        {
+	     int arr[]=new int[8];
+	     inputArr(arr);
+	     displayArr(arr);
+        }
+
 }
