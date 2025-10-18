@@ -1,6 +1,6 @@
 package _03_LinkedList;
-//insert node in linkedlist
-public class Problem_04 {
+//delete node form Linked list
+public class Problem_05 {
 	public static class Node{
 		int data;
 		Node next;
@@ -14,39 +14,41 @@ public class Problem_04 {
 			head=head.next;
 		}
 	}
-	public static Node insertAtHead(Node head,int data) {
-		Node newdata=new Node(data);
-		newdata.next=head;
-		return newdata;
+	public static Node deleteatHead(Node head) {
+		return head.next;
 	}
-	public static Node insertAtTail(Node head,int data) {
-		Node newdata=new Node(data);
-		  Node temp = head;
-	        while (temp.next != null) {
-	            temp = temp.next;
-	        }
-	        temp.next = newdata;
-	        return head;
+	public static Node deleteatTail(Node head) { 
+		Node temp=head;
+		while(temp.next.next !=null) {
+			temp=temp.next;
+		}
+		temp.next=null;
+		return head;
 	}
 	public static void main(String [] arg) {
 		Node a=new Node(1);
 		Node b=new Node(2);
 		Node c=new Node(3);
 		Node d=new Node(4);
-		Node e=new Node(6);
+		Node e=new Node(5);
+		Node f=new Node(6);
+		Node g=new Node(7);
 		a.next=b;
 		b.next=c;
 		c.next=d;
 		d.next=e;
+		e.next=f;
+		f.next=g;
 		
 		Display(a);
 		System.out.println();
-		a=insertAtHead(a,0);
+		a=deleteatHead(a);
 		Display(a);
 		System.out.println();
-		a=insertAtTail(a,0);
+		a=deleteatTail(a);
 		Display(a);
 		
+		 
 		
 	}
 
