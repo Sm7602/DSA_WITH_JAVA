@@ -4,24 +4,20 @@ public class Problem_02 {
 	public static class Node{
 		int data;
 		Node next;
-		
 		public Node(int data) {
 			this.data=data;
 		}
 	}
 	public static void Display(Node head) {
-		Node temp=head;
-		while(temp !=null)
-		{
-			System.out.print(temp.data+" ");
-			temp=temp.next;
+		while(head != null) {
+			System.out.print(head.data+" ");
+			head=head.next;
 		}
 	}
 	public static void Displayrev(Node head) {
 		if(head == null) return;
 		Displayrev(head.next);
 		System.out.print(head.data+" ");
-		
 	}
 	public static void main(String[] arg) {
 		Node a=new Node(1);

@@ -1,7 +1,4 @@
 package _03_LinkedList;
-
-import _03_LinkedList.Problem_02.Node;
-
 // find the length of likedlist
 public class Problem_03 {
 	public static class Node{
