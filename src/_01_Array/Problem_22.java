@@ -29,19 +29,16 @@ public class Problem_22 {
 	
 	public static void sortingArr(int arr[])
 	{
-		for(int i=0;i<arr.length-1;i++)
-		{
-			for(int j=0;j<arr.length-i-1;j++)
+			for(int i=0;i<arr.length;i++)
 			{
-				int temp=0;
-				 if(arr[j]>arr[j+1])
-			       {
-			    	temp=arr[j];
-			    	arr[j]=arr[j+1];
-			    	arr[j+1]=temp;
-			       }
+				for(int j=i;j<arr.length;j++) {
+					if(arr[i]>arr[j]) {
+						int temp=arr[i];
+						arr[i]=arr[j];
+						arr[j]=temp;
+					}
+				}
 			}
-	   }
 	}
 	
 	public static void af_sor_displayArr(int arr[])
