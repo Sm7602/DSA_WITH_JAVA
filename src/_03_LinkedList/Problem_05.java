@@ -25,6 +25,9 @@ public class Problem_05 {
 		temp.next=null;
 		return head;
 	}
+	public static Node deleteatAll(Node head) {
+		return head=null;
+	}
 	public static void main(String [] arg) {
 		Node a=new Node(1);
 		Node b=new Node(2);
@@ -47,8 +50,10 @@ public class Problem_05 {
 		System.out.println();
 		a=deleteatTail(a);
 		Display(a);
-		
-		 
+		System.out.println();
+		a=deleteatAll(a);
+		Display(a);
+		System.out.println("jgrehguhrgu");
 		
 	}
 
