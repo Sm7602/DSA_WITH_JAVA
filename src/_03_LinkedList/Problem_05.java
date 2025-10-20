@@ -51,7 +51,7 @@ public class Problem_05 {
 		a=deleteatTail(a);
 		Display(a);
 		System.out.println();
-		a=deleteatAll(a);
+//		a=deleteatAll(a);
 		Display(a);
 		System.out.println("jgrehguhrgu");
 		
