@@ -9,7 +9,7 @@ public class _02_implementation {
 		}
 	}
 	public static class LinkedList{
-		Node head;
+		public Node head;
 		Node tail;
 		//add data in likedlist
 		void add(int data) {
@@ -123,7 +123,6 @@ public class _02_implementation {
 				}
 				h=head;
 			}
-			
 		}
 		//find data by index
 		boolean search(int index) {
@@ -166,7 +165,7 @@ public class _02_implementation {
 	public static void main(String[] arg) {
 		LinkedList ll=new LinkedList();
 		ll.add(7);
-		ll.add(2);
+		ll.add(1);
 		ll.add(31);
 		ll.addLast(1);
 		ll.addFrist(9);
